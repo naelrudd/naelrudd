@@ -1,3 +1,23 @@
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Natanael%20Rudy%20Hadinata&fontSize=40&fontColor=ffffff&animation=fadeIn&desc=AI%20%26%20Full-Stack%20Engineer%20—%20I%20run%20my%20own%20agent%20stack&descSize=15&descAlignY=64" width="100%"/>
+
+<a href="https://github.com/naelrudd"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=21&duration=2600&pause=900&color=58A6FF&center=true&vCenter=true&width=760&lines=dispatch+--prompt+%22who+is+naelrudd%3F%22;placement%3A+portfolio+%C2%B7+slot%3A+deep;I+build+self-hosted+LLM+agent+systems;4%2C100%2B+docs+pages+mirrored+for+agents;Python+%C2%B7+TypeScript+%C2%B7+MCP+%C2%B7+A2A;guitarist+%40+Lucien+Sunmoon" alt="Typing SVG"/></a>
+
+<br/>
+
+<a href="https://x.com/naelrudd"><img src="https://img.shields.io/badge/X-@naelrudd-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/natanaelrudy/"><img src="https://img.shields.io/badge/LinkedIn-Natanael%20Rudy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://medium.com/@natanaelrudyhadinata"><img src="https://img.shields.io/badge/Medium-@natanaelrudyhadinata-000000?style=for-the-badge&logo=medium&logoColor=white"/></a>
+<a href="https://natanaelrudy.gumroad.com"><img src="https://img.shields.io/badge/Gumroad-Store-FF90E8?style=for-the-badge&logo=gumroad&logoColor=black"/></a>
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=naelrudd&label=PROFILE%20VIEWS&color=58a6ff&style=flat-square"/>
+<img src="https://img.shields.io/github/followers/naelrudd?label=FOLLOWERS&style=flat-square&color=58a6ff"/>
+
+</div>
+
 ```text
 $ dispatch --prompt "who is naelrudd?"
   placement  → portfolio / naelrudd          (matched: agent-stack, llms, malang)
@@ -6,28 +26,26 @@ $ dispatch --prompt "who is naelrudd?"
   decision   → logged below, with reasons. welcome in.
 ```
 
-# Natanael Rudy Hadinata — Nael
-
-**AI & Full-Stack Engineer · Malang, Indonesia · Universitas Negeri Malang**
-
 I don't rent my AI stack, I run it. Every prompt I send — from Telegram, my dashboard, or another agent — goes through one dispatch service on my own VPS that picks the session, picks the model, runs the tools, and writes the whole thing into a database I own. Most of what's below exists because building that made me need it.
+
+📍 Malang, Indonesia · 🎓 Universitas Negeri Malang · 🟢 Open to freelance: automation/agent builds + data & spreadsheet work
 
 ---
 
-## Route yourself
+## 🧭 Route yourself
 
 Like any good dispatch, this profile sends you where you actually wanted to go:
 
 | You are… | Your prompt sounds like… | Go to |
 |---|---|---|
-| A recruiter | *"can he build agent systems?"* | [agent-stack ↓](#decision-log) + [LinkedIn](https://www.linkedin.com/in/natanaelrudy/) |
-| A potential client | *"can he clean up / automate my data?"* | [What I sell ↓](#what-i-sell) |
+| A recruiter | *"can he build agent systems?"* | [Decision log ↓](#-decision-log) + [LinkedIn](https://www.linkedin.com/in/natanaelrudy/) |
+| A potential client | *"can he clean up / automate my data?"* | [What I sell ↓](#-what-i-sell) |
 | A developer | *"show me the tools"* | [llm-docs-mirrors](https://github.com/naelrudd/llm-docs-mirrors) · [model-routing-kit](https://github.com/naelrudd/model-routing-kit) · [cgr-code-graph](https://github.com/naelrudd/cgr-code-graph) |
-| A music person | *"wait, he's in a band?"* | [Outside code ↓](#outside-code) |
+| A music person | *"wait, he's in a band?"* | [Outside code ↓](#-outside-code) |
 
 ---
 
-## Decision log
+## 📜 Decision log
 
 My dispatch logs every decision with its reason (`why`). So does this profile.
 
@@ -68,18 +86,11 @@ flowchart LR
 
 ---
 
-## What I sell
+## 🛠 Stack
 
-```yaml
-# freelance.policy.yaml — slots for hire
-hire:
-  automation:  agent builds · API / webhook integrations · Sheets automation
-  data:        spreadsheet clean-up · reconciliation · web research
-  method:      sample-first — approve a small batch, then I run the rest
-  status:      open
-```
-
-## My policy file
+<div align="center">
+<img src="https://skillicons.dev/icons?i=python,typescript,javascript,nextjs,react,tailwind,docker,linux,sqlite,php,git,github,nodejs&theme=dark"/>
+</div>
 
 ```yaml
 # stack.policy.yaml
@@ -93,7 +104,56 @@ principles:
   - data must reconcile exactly, or say why it doesn't
 ```
 
-## Outside code
+---
+
+## 💼 What I sell
+
+```yaml
+# freelance.policy.yaml — slots for hire
+hire:
+  automation:  agent builds · API / webhook integrations · Sheets automation
+  data:        spreadsheet clean-up · reconciliation · web research
+  method:      sample-first — approve a small batch, then I run the rest
+  status:      open
+```
+
+---
+
+## 📊 The numbers, live
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=naelrudd&theme=darkhub&no-frame=true&margin-w=12&column=6" alt="GitHub trophies"/>
+
+<br/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=naelrudd&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=naelrudd&layout=compact&theme=tokyonight&hide_border=true"/>
+
+<br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=naelrudd&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
+
+<br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=naelrudd&bg_color=0d1117&color=58a6ff&line=58a6ff&point=f778ba&area=true&hide_border=true" width="95%" alt="Contribution activity graph"/>
+
+</div>
+
+### 🐍 Watch the snake eat my contributions
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/naelrudd/naelrudd/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/naelrudd/naelrudd/output/github-contribution-grid-snake.svg"/>
+  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/naelrudd/naelrudd/output/github-contribution-grid-snake-dark.svg"/>
+</picture>
+<sub>Generated by a GitHub Action in this repo, twice a day. Even my profile README is automated — that's kind of the point.</sub>
+</div>
+
+---
+
+## 🎸 Outside code
 
 <details>
 <summary><b>The band</b> — click, it's worth it</summary>
@@ -101,8 +161,12 @@ principles:
 Guitarist & co-composer in <b>Lucien Sunmoon</b>, a dream-pop band from Malang (Haum Entertainment). Debut album <i>Nothing Blooms at Midnight</i> — released 14 Feb 2026, recorded at Haum Studio. The same ears sell beginner guitar systems and content-repurposing kits on <a href="https://natanaelrudy.gumroad.com">Gumroad</a>.
 </details>
 
-## Find me
+---
 
-X [@naelrudd](https://x.com/naelrudd) · [LinkedIn](https://www.linkedin.com/in/natanaelrudy/) · [Medium](https://medium.com/@natanaelrudyhadinata) · [Gumroad](https://natanaelrudy.gumroad.com)
+<div align="center">
 
 <sub>Routed through dispatch · placement: your eyeballs · slot: deep · decision logged. Thanks for reading to the bottom of the log.</sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
+
+</div>
