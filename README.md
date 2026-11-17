@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Natanael%20Rudy%20Hadinata&fontSize=40&fontColor=ffffff&animation=fadeIn&desc=AI%20%26%20Full-Stack%20Engineer%20—%20I%20run%20my%20own%20agent%20stack&descSize=15&descAlignY=64" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Natanael%20Rudy%20Hadinata&fontSize=40&fontColor=ffffff&animation=fadeIn&desc=AI%20and%20Full-Stack%20Engineer%20—%20I%20run%20my%20own%20agent%20stack&descSize=15&descAlignY=64" width="100%"/>
 
 <a href="https://github.com/naelrudd"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=21&duration=2600&pause=900&color=58A6FF&center=true&vCenter=true&width=760&lines=dispatch+--prompt+%22who+is+naelrudd%3F%22;placement%3A+portfolio+%C2%B7+slot%3A+deep;I+build+self-hosted+LLM+agent+systems;4%2C100%2B+docs+pages+mirrored+for+agents;Python+%C2%B7+TypeScript+%C2%B7+MCP+%C2%B7+A2A;guitarist+%40+Lucien+Sunmoon" alt="Typing SVG"/></a>
 
