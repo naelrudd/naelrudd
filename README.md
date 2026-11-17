@@ -123,12 +123,13 @@ hire:
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=naelrudd&theme=darkhub&no-frame=true&margin-w=12&column=6" alt="GitHub trophies"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=naelrudd&theme=tokyonight" alt="Profile details"/>
 
 <br/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=naelrudd&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=naelrudd&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=naelrudd&theme=tokyonight"/>
+<img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=naelrudd&theme=tokyonight"/>
+<img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=naelrudd&theme=tokyonight"/>
 
 <br/>
 
