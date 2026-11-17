@@ -1,60 +1,108 @@
-# Hi, I'm Natanael Rudy Hadinata — Nael
+```text
+$ dispatch --prompt "who is naelrudd?"
+  placement  → portfolio / naelrudd          (matched: agent-stack, llms, malang)
+  slot       → deep
+  model      → the one that actually ships
+  decision   → logged below, with reasons. welcome in.
+```
+
+# Natanael Rudy Hadinata — Nael
 
 **AI & Full-Stack Engineer · Malang, Indonesia · Universitas Negeri Malang**
 
-I build my own AI agent infrastructure instead of renting it. My main project is a self-hosted dispatch layer that decides — for every prompt — which session it belongs to and which model should answer it, with all history stored in my own database on my own VPS. Everything else here grew out of that work: tools to feed documentation to agents, route tasks to cheaper models, and index a whole drive of code for an agent to query.
-
-Currently open to freelance work: agent/automation builds, and data & spreadsheet work (Google Sheets / Excel, reconciliation, research).
+I don't rent my AI stack, I run it. Every prompt I send — from Telegram, my dashboard, or another agent — goes through one dispatch service on my own VPS that picks the session, picks the model, runs the tools, and writes the whole thing into a database I own. Most of what's below exists because building that made me need it.
 
 ---
 
-## What I'm building
+## Route yourself
 
-### [agent-stack](https://github.com/naelrudd/agent-stack) — flagship, private for now
-A self-owned decision layer for AI agents. One service (`dispatch`, Python) is the single door for Telegram, a web dashboard, and any OpenAI-compatible client:
+Like any good dispatch, this profile sends you where you actually wanted to go:
 
-- **Placement** — assigns each prompt to the right project/session using policy rules + FTS5 search over past sessions; every decision is logged with its reason
-- **Model selection** — clients ask for a slot (`fast` / `balanced` / `deep` / `code` / `vision`), policy picks from a live catalog of 1,500+ models behind a 9router gateway
-- **Tools over protocols, not products** — MCP, A2A, and OpenAI-compatible HTTP; Google Sheets finance tools, Composio apps, and a self-hosted Playwright browser
-- 300+ tests, Docker + Compose on a Singapore VPS, history in its own SQLite store — no UI or vendor dashboard owns the data
-
-> The repo is private, but it's written to public-project standards (README, CI, ADRs, MIT license) so it can be opened later without a rewrite.
-
-### Tools for LLM agents — open source
-
-| Project | What it does |
-|---|---|
-| [llms-mirror](https://github.com/naelrudd/llms-mirror) · [PyPI](https://pypi.org/project/llms-mirror/) | Zero-dependency tool that mirrors official docs (via `llms.txt`) as plain Markdown for LLM ingestion and RAG |
-| [llm-docs-mirrors](https://github.com/naelrudd/llm-docs-mirrors) | 4,100+ pages of payment/fintech docs mirrored with the tool above — Clerk (2,343), Razorpay (2,237), Midtrans (589), Stripe (473), Canva (392), Xendit (336) — each with `llms-full.txt`, an index, and a RAG starter kit |
-| [model-routing-kit](https://github.com/naelrudd/model-routing-kit) | Route coding tasks to the cheapest model tier that actually works: verify with code, escalate exactly once on failure. Works with Hermes, Claude Code, Codex |
-| [cgr-code-graph](https://github.com/naelrudd/cgr-code-graph) | Turn ~20 projects on one drive into a queryable code graph for agents over MCP — local embeddings, no API key, no Docker, no GPU |
-| [ai-software-engineer-roadmap](https://github.com/naelrudd/ai-software-engineer-roadmap) | A 12-week, level-by-level roadmap to AI Software Engineer / AI Evaluation Engineer, with free resources and portfolio projects |
-
-### Other builds
-
-- **StatClean** — [statistical-data-cleaning-system](https://github.com/naelrudd/statistical-data-cleaning-system): web-based statistical data cleaning & validation (missing values, duplicates, cross-column rules, outlier detection, 0–100 quality score). Capstone based on field experience at **BPS Kota Malang**.
-- **KanvasHub** — a TypeScript platform for Instagram carousel creators (in development, kanvashub.id); Gumroad is its interim storefront.
-- **GABTA** — [QR attendance system](https://github.com/naelrudd/GABTA) integrated with a database & API.
-- **Finance automation for myself** — a multi-account workbook (BCA, BNI, GoPay, DANA, cash) reconciled to the last rupiah, fed automatically from bank/e-wallet email notifications into Google Sheets. This is also the work I sell as a freelancer.
+| You are… | Your prompt sounds like… | Go to |
+|---|---|---|
+| A recruiter | *"can he build agent systems?"* | [agent-stack ↓](#decision-log) + [LinkedIn](https://www.linkedin.com/in/natanaelrudy/) |
+| A potential client | *"can he clean up / automate my data?"* | [What I sell ↓](#what-i-sell) |
+| A developer | *"show me the tools"* | [llm-docs-mirrors](https://github.com/naelrudd/llm-docs-mirrors) · [model-routing-kit](https://github.com/naelrudd/model-routing-kit) · [cgr-code-graph](https://github.com/naelrudd/cgr-code-graph) |
+| A music person | *"wait, he's in a band?"* | [Outside code ↓](#outside-code) |
 
 ---
 
-## Stack
+## Decision log
 
-**Languages:** Python · TypeScript / JavaScript · SQL · PHP
-**AI / agents:** MCP · A2A · OpenAI-compatible APIs · LLM routing & evaluation · RAG · Playwright
-**Web & data:** Next.js · React · Tailwind CSS · Google Sheets API · REST / webhooks
-**Ops:** Docker + Compose · Linux VPS · systemd · SQLite (FTS5) · GitHub Actions
+My dispatch logs every decision with its reason (`why`). So does this profile.
+
+### `DEC-001` — agent-stack · *flagship, private*
+**Decision:** one door for everything. Telegram, a web dashboard, and any OpenAI-compatible client all talk to a single Python service (`dispatch` :8803).
+**Why:** vendor routers are transport, not memory. Placement and model choice are mine; history lives in my own SQLite store, never inside a UI.
+**How:** placement = policy rules + FTS5 search over past sessions · model = named slots (`fast` / `balanced` / `deep` / `code` / `vision`) over a live catalog of **1,500+ models** · tools = protocols, not products — **MCP, A2A**, OpenAI-compatible HTTP, Google Sheets, Composio, a self-hosted Playwright browser.
+**Proof:** 300+ tests · Docker + Compose · runs 24/7 on a Singapore VPS · written to public-project standards (CI, ADRs, MIT) so it can be opened later without a rewrite.
+
+```mermaid
+flowchart LR
+    TG[Telegram] --> D[dispatch :8803]
+    UI[Dashboard] --> D
+    AG[Other agents] -->|MCP / A2A| D
+    D -->|slots, not model names| R[9router<br/>1,500+ models]
+    D --> S[(state.db<br/>sessions · decisions)]
+    D --> T[Sheets · apps · browser]
+```
+
+### `DEC-002` — llms-mirror + llm-docs-mirrors · *open source*
+**Decision:** if agents are going to read documentation, feed it to them properly.
+**What:** [`llms-mirror`](https://github.com/naelrudd/llms-mirror) (zero dependencies, [on PyPI](https://pypi.org/project/llms-mirror/)) mirrors official docs as clean Markdown for LLM ingestion & RAG. With it I maintain [**4,100+ mirrored pages**](https://github.com/naelrudd/llm-docs-mirrors) — Clerk 2,343 · Razorpay 2,237 · Midtrans 589 · Stripe 473 · Canva 392 · Xendit 336 — each with `llms-full.txt`, an index, and a RAG starter kit.
+
+### `DEC-003` — model-routing-kit · *open source*
+**Decision:** never pay top-model prices for a job a cheap model can finish.
+**What:** [route coding tasks](https://github.com/naelrudd/model-routing-kit) to the cheapest tier that actually works — verify with code, escalate exactly once on failure, then stop and say so. Works with Hermes, Claude Code, Codex.
+
+### `DEC-004` — cgr-code-graph · *open source*
+**Decision:** an agent that can't see your codebase is just guessing.
+**What:** [index ~20 projects on one drive](https://github.com/naelrudd/cgr-code-graph) into a code graph an agent can query over MCP. Local embeddings — no API key, no Docker, no GPU.
+
+### `DEC-005` — StatClean · *capstone*
+**Decision:** automate the spreadsheet checking I watched people do by hand at **BPS Kota Malang**.
+**What:** [statistical data cleaning & validation](https://github.com/naelrudd/statistical-data-cleaning-system) — missing values, duplicates, cross-column rules, outlier detection, and a 0–100 quality score that tells you how dirty your data actually is.
+
+### `DEC-006` — the rest of the bench
+**KanvasHub** (TypeScript, in development — carousel-creator platform, kanvashub.id) · [**GABTA**](https://github.com/naelrudd/GABTA) (QR attendance + API) · [**ai-software-engineer-roadmap**](https://github.com/naelrudd/ai-software-engineer-roadmap) (the 12-week roadmap I follow myself) · a finance system that reconciles my 5 accounts/e-wallets to the last rupiah and feeds itself from bank notification emails — which is also the demo for what I sell below.
 
 ---
+
+## What I sell
+
+```yaml
+# freelance.policy.yaml — slots for hire
+hire:
+  automation:  agent builds · API / webhook integrations · Sheets automation
+  data:        spreadsheet clean-up · reconciliation · web research
+  method:      sample-first — approve a small batch, then I run the rest
+  status:      open
+```
+
+## My policy file
+
+```yaml
+# stack.policy.yaml
+languages:  [Python, TypeScript, SQL, PHP]
+agents:     [MCP, A2A, OpenAI-compatible APIs, LLM routing, RAG, Playwright]
+web_data:   [Next.js, React, Tailwind, Google Sheets API, REST, webhooks]
+ops:        [Docker, Linux VPS, systemd, SQLite/FTS5, GitHub Actions]
+principles:
+  - own the decision layer, rent nothing that holds your history
+  - cheapest model that finishes the job — verified, not vibes
+  - data must reconcile exactly, or say why it doesn't
+```
 
 ## Outside code
 
-Guitarist and co-composer in **Lucien Sunmoon** (dream pop, Malang — Haum Entertainment). Debut album *Nothing Blooms at Midnight* released 14 Feb 2026. I also sell beginner guitar systems and content-repurposing kits on [Gumroad](https://natanaelrudy.gumroad.com).
+<details>
+<summary><b>The band</b> — click, it's worth it</summary>
+<br>
+Guitarist & co-composer in <b>Lucien Sunmoon</b>, a dream-pop band from Malang (Haum Entertainment). Debut album <i>Nothing Blooms at Midnight</i> — released 14 Feb 2026, recorded at Haum Studio. The same ears sell beginner guitar systems and content-repurposing kits on <a href="https://natanaelrudy.gumroad.com">Gumroad</a>.
+</details>
 
 ## Find me
 
-- X: [@naelrudd](https://x.com/naelrudd)
-- Medium: [@natanaelrudyhadinata](https://medium.com/@natanaelrudyhadinata)
-- Gumroad: [natanaelrudy.gumroad.com](https://natanaelrudy.gumroad.com)
-- Portfolio site: [github.com/naelrudd/portofolio](https://github.com/naelrudd/portofolio)
+X [@naelrudd](https://x.com/naelrudd) · [LinkedIn](https://www.linkedin.com/in/natanaelrudy/) · [Medium](https://medium.com/@natanaelrudyhadinata) · [Gumroad](https://natanaelrudy.gumroad.com)
+
+<sub>Routed through dispatch · placement: your eyeballs · slot: deep · decision logged. Thanks for reading to the bottom of the log.</sub>
